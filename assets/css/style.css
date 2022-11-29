@@ -1,7 +1,7 @@
 h1 {
 font-size: 4em;
 }
-h1, h2, h3, h4, h5, #time{
+h1, h2, h3, h4, h5, #time,p {
     text-align: center;
 }
 header, #time {
@@ -9,7 +9,7 @@ margin: 4em;
 
 }
 h3{
-    font-size: medium;
+    font-size: large;
 }
 .green{
     color: green;
@@ -17,6 +17,7 @@ h3{
 .red{
     color: red;
 }
-.card {
-    margin: auto;
+a{
+    text-decoration: none;
+    color: white;
 }

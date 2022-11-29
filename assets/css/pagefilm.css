@@ -1,0 +1,27 @@
+h1 {
+    font-size: 3em;
+    }
+    h1, h2, h3, h4, h5, #time{
+        text-align: center;
+    }
+    .card {
+        margin: auto;
+        width: 30em !important;
+    }
+    p, li , a, .card-body{
+        text-align: center;
+    }
+    .green{
+        color: green;
+    }
+    .red{
+        color: red;
+    }
+    a {
+        text-align: center;
+        color: white; 
+        text-decoration: none;
+    }
+    button{
+        width: 100%;
+    }
