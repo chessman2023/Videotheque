@@ -1,23 +1,55 @@
 h1 {
-font-size: 4em;
+    font-size: 4em;
 }
-h1, h2, h3, h4, h5, #time,p {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+#time,
+.director {
     text-align: center;
 }
-header, #time {
-margin: 4em;
+
+header,
+#time {
+    margin: 4em;
+}
+
+h2 {
+    font-size: 150%;
+}
+
+h3 {
+    font-size: 100%;
+}
+
+.discription {
+    height: 12em;
+    text-align: justify;
+    overflow: scroll;
 
 }
-h3{
-    font-size: large;
-}
-.green{
+
+.green {
     color: green;
 }
-.red{
+
+.red {
     color: red;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
+    cursor: pointer;
+}
+
+img {
+    height: 40em;
+}
+
+#time {
+    font-weight: bold;
 }

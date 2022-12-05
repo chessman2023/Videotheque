@@ -18,3 +18,9 @@ const urlWebsite = brand
                     .toLowerCase()
                     // J'utilise la concaténation afin de rajouter le .fr
                     + ".fr";
+
+
+
+    
+
+

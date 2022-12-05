@@ -32,42 +32,57 @@
 
 }*/
 
-for (let Film of Films) {
 
-    let fileOFfilm = Films.find(rechercheId);
 
-    if ( fileOFfilm.totalTimeInminutes == fileOFfilm.watchedTimeInMinutes ) {
-        signwatched = `<i class="green fa-solid fa-film"></i>` 
-    }
-    else {
-        signwatched = `<i class="red fa-solid fa-film"></i>`
-    }
+  let fileOFfilm = Films.find(rechercheId);
 
-    watchedPersent = Math.round((fileOFfilm.watchedTimeInMinutes / fileOFfilm.totalTimeInminutes) * 100);
-    toHoursAndMinutes = (Math.floor(fileOFfilm.totalTimeInminutes / 60))+ "h " + (fileOFfilm.totalTimeInminutes % 60) + "min";
-    
-    htmlElements =
-        `<div class="card" style="width: 18rem;">
-           <div id="photo">
-           <img src="${fileOFfilm.linkImage}" class="card-img-top" alt="...">
-           </div>
+  if (fileOFfilm.totalTimeInminutes == fileOFfilm.watchedTimeInMinutes) {
+    signwatched = `<i class="green fa-solid fa-film"></i>`
+  }
+  else {
+    signwatched = `<i class="red fa-solid fa-film"></i>`
+  }
+
+  watchedPersent = Math.round((fileOFfilm.watchedTimeInMinutes / fileOFfilm.totalTimeInminutes) * 100);
+  toHoursAndMinutes = (Math.floor(fileOFfilm.totalTimeInminutes / 60)) + "h " + (fileOFfilm.totalTimeInminutes % 60) + "min";
+
+  htmlElements2 =
+    `<div class="container">
+    <div class="row">
+
+        <div class="col image col-sm-12 col-md-6 col-lg-6 card" style="width: 18rem;">
+            <div id=" photo">
+                <img src="${fileOFfilm.linkImage}" class="card-img-top" alt="${fileOFfilm.title}">
+            </div>
+        </div>
+        <div class="col col-sm-12 col-md-6 col-lg-6 m-auto">
             <div class="card-body">
-              <h5 class="card-title">${fileOFfilm.title}</h5>
-              <p class="card-text">${fileOFfilm.shortDiscription}</p>
+                <h2 class="card-title">${fileOFfilm.title}</h2>
+                <p class="card-text">${fileOFfilm.shortDiscription}</p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item item1">Genres : ${fileOFfilm.Genre}</li>
-              <li class="list-group-item item2">Réaliser par : ${fileOFfilm.director}</li>
-              <li class="list-group-item item3">${watchedPersent} % a été vu  ${signwatched}</li>  
-              <li class="list-group-item item4">Durée : ${toHoursAndMinutes}</li>
-              <li class="list-group-item item5">Durée visionnée : ${fileOFfilm.watchedTimeInMinutes} min</li>
+                <li class="list-group-item item1">Genres : ${fileOFfilm.Genre}</li>
+                <li class="list-group-item item2">Réaliser par : ${fileOFfilm.director}</li>
+                <li class="list-group-item item3">${watchedPersent} % a été vu ${signwatched}</li>
+                <li class="list-group-item item4">Durée : ${toHoursAndMinutes}</li>
+                <li class="list-group-item item5">Durée visionnée : ${fileOFfilm.watchedTimeInMinutes} min</li>
             </ul>
             <div class="card-body">
-            <button type="button" class="btn btn-sm btn btn-primary"><a href="https://www.senscritique.com/liste/Films_vus_en_2022/3166440" target="_blank">la source</a></button>
-                        <button type="button" class="btn btn-sm btn-success"><a href="index.html" class="card-link">Acceuil</a></button>
-              
+                <button type="button" class="btn btn-sm btn btn-primary"><a
+                        href="https://www.senscritique.com/liste/Films_vus_en_2022/3166440" target="_blank">la
+                        source</a></button>
+                <button type="button" class="btn btn-sm btn-success"><a href="index.html"
+                        class="card-link">Accueil</a></button>
+
             </div>
-          </div>`
-    document.getElementById("matinid").innerHTML = htmlElements;
-}
+        </div>
+
+    </div>
+</div>
+<div class="youtube">
+<br><h3>BANDE ANNONCE</h3>
+<iframe width="640" height="385" src="https://www.youtube.com/embed/${fileOFfilm.linkyoutube}" title="YouTube video player" 
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><br>`
+  document.getElementById("matinid").innerHTML = htmlElements2;
+
 
