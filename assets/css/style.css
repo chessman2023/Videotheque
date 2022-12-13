@@ -53,3 +53,8 @@ img {
 #time {
     font-weight: bold;
 }
+
+#button1{
+    text-align: center !important;
+   width:100%;
+}
