@@ -58,14 +58,15 @@
         <div class="col col-sm-12 col-md-6 col-lg-6 m-auto">
             <div class="card-body">
                 <h2 class="card-title">${fileOFfilm.title}</h2>
+                <p class="card-text text-center">Année: ${fileOFfilm.year}</p>
                 <p class="card-text">${fileOFfilm.shortDiscription}</p>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item item1">Genres : ${fileOFfilm.Genre}</li>
                 <li class="list-group-item item2">Réaliser par : ${fileOFfilm.director}</li>
-                <li class="list-group-item item3">${watchedPersent} % a été vu ${signwatched}</li>
                 <li class="list-group-item item4">Durée : ${toHoursAndMinutes}</li>
                 <li class="list-group-item item5">Durée visionnée : ${fileOFfilm.watchedTimeInMinutes} min</li>
+                <li class="list-group-item item3">${watchedPersent} % a été vu ${signwatched}</li>
             </ul>
             <div class="card-body">
                 <button type="button" class="btn btn-sm btn btn-primary"><a
@@ -79,7 +80,7 @@
 
     </div>
 </div>
-<div class="youtube">
+<div class="youtube mt-5">
 <br><h3>BANDE ANNONCE</h3>
 <iframe width="640" height="385" src="https://www.youtube.com/embed/${fileOFfilm.linkyoutube}" title="YouTube video player" 
 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><br>`

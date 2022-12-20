@@ -17,7 +17,7 @@ const movieFetch2 = fetch(urlFetch2);
     `<div class="container">
     <div class="row">
 
-        <div class="col image col-sm-12 col-md-6 col-lg-6 card" style="width: 18rem;">
+        <div class="image col col-sm-12 col-md-6 col-lg-6 card" style="width: 18rem;">
             <div id=" photo">
                 <img src="${movie.imageUrl}" class="card-img-top" alt="${movie.title}">
             </div>
@@ -25,15 +25,15 @@ const movieFetch2 = fetch(urlFetch2);
         <div class="col col-sm-12 col-md-6 col-lg-6 m-auto">
             <div class="card-body">
                 <h2 class="card-title">${movie.title}</h2>
+                <p class="card-text text-center">Année: ${movie.year}</p>
                 <p class="card-text"><b>Synopsis :</b> ${movie.shortDiscription}</p>
             </div>
             <ul class="list-group list-group-flush">
-            <li class="list-group-item item1">Année : ${movie.year}</li>
             <li class="list-group-item item1">Genres : ${movie.Genre}</li>
             <li class="list-group-item item2">Réaliser par : ${movie.director}</li>
-            <li class="list-group-item item3">${watchedPersent} % a été vu ${signwatched}</li>
             <li class="list-group-item item4">Durée : ${toHoursAndMinutes}</li>
             <li class="list-group-item item5">Durée visionnée : ${movie.watchedTimeInMinutes} min</li>
+            <li class="list-group-item item3">${watchedPersent} % a été vu ${signwatched}</li>
             </ul>
             <div class="card-body">
                 <button type="button" class="btn btn-sm btn btn-primary"><a
@@ -47,8 +47,8 @@ const movieFetch2 = fetch(urlFetch2);
 
     </div>
 </div>
-<div class="youtube">
-<br><h3>BANDE ANNONCE</h3>
+<div class="youtube mt-5">
+<h3>BANDE ANNONCE</h3>
 <iframe width="640" height="385" src="https://www.youtube.com/embed/${movie.linkyoutube}" title="YouTube video player" 
 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><br>`
   document.getElementById("matinid").innerHTML = Apipagefetch;

@@ -36,7 +36,7 @@ const movieFetch = fetch(urlFetch);
                 <h5 class="text-muted text-center">Durée: ${toHoursAndMinutes} <br>Durée visionnée: ${movie.watchedTimeInMinutes} min</h5>
                 <h5> ${watchedPersent}% a été vu ${signwatched}</h5><br>
                 <div class="discription border-0"><p><b>Synopsis :</b>${movie.shortDiscription}</div></p>
-                <div class="d-flex justify-content-between align-items-center">
+                <div class="btn1 d-flex justify-content-between align-items-center">
                 <div class="btn-group mx-5">
                         <button type="button" class="btn btn-sm btn-primary"><a href="https://www.senscritique.com/liste/Films_vus_en_2022/3166440" target="_blank">la source</a></button>
                         <button type="button" class="btn btn-sm btn-success"><a href="Api-filmpages.html?id=${movie.id}">Voir la fiche du film</a></button>
